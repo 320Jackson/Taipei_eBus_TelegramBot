@@ -1,0 +1,32 @@
+[
+    {
+       "PlateNumb":"KKA-1022",
+       "OperatorID":"400",
+       "RouteUID":"TPE10432",
+       "RouteID":"10432",
+       "RouteName":{
+          "Zh_tw":"藍26",
+          "En":"BL26"
+       },
+       "SubRouteUID":"TPE10432",
+       "SubRouteID":"10432",
+       "SubRouteName":{
+          "Zh_tw":"藍26",
+          "En":"B26"
+       },
+       "Direction":1,
+       "StopUID":"TPE10771",
+       "StopID":"10771",
+       "StopName":{
+          "Zh_tw":"東興路",
+          "En":"Dongxing Rd."
+       },
+       "StopSequence":2,
+       "DutyStatus":1,
+       "BusStatus":0,
+       "A2EventType":1,
+       "GPSTime":"2020-12-27T18:02:08+08:00",
+       "SrcUpdateTime":"2020-12-27T18:02:30+08:00",
+       "UpdateTime":"2020-12-27T18:02:34+08:00"
+    }
+ ]

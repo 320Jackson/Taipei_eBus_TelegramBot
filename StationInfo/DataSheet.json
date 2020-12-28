@@ -1,0 +1,75 @@
+[
+    {
+      "StationUID": "TPE1",
+      "StationID": "1",
+      "StationName": {
+        "Zh_tw": "十八份"
+      },
+      "StationPosition": {
+        "PositionLat": 25.15045,
+        "PositionLon": 121.52316,
+        "GeoHash": "wsqrj66ry"
+      },
+      "StationAddress": "東昇路33之2號同向(向西)",
+      "Stops": [
+        {
+          "StopUID": "TPE25651",
+          "StopID": "25651",
+          "StopName": {
+            "Zh_tw": "十八份",
+            "En": "Shibafen"
+          },
+          "RouteUID": "TPE11134",
+          "RouteID": "11134",
+          "RouteName": {
+            "Zh_tw": "小8",
+            "En": "S8"
+          }
+        },
+        {
+          "StopUID": "TPE26051",
+          "StopID": "26051",
+          "StopName": {
+            "Zh_tw": "十八份",
+            "En": "Shibafen"
+          },
+          "RouteUID": "TPE11142",
+          "RouteID": "11142",
+          "RouteName": {
+            "Zh_tw": "小9 (台灣好行-北投竹子湖)",
+            "En": "S9"
+          }
+        },
+        {
+          "StopUID": "TPE55983",
+          "StopID": "55983",
+          "StopName": {
+            "Zh_tw": "十八份",
+            "En": "Shibafen"
+          },
+          "RouteUID": "TPE11143",
+          "RouteID": "11143",
+          "RouteName": {
+            "Zh_tw": "小26",
+            "En": "S26"
+          }
+        },
+        {
+          "StopUID": "TPE56792",
+          "StopID": "56792",
+          "StopName": {
+            "Zh_tw": "十八份",
+            "En": "Shibafen"
+          },
+          "RouteUID": "TPE15726",
+          "RouteID": "15726",
+          "RouteName": {
+            "Zh_tw": "129",
+            "En": "129"
+          }
+        }
+      ],
+      "UpdateTime": "2020-12-26T04:16:19+08:00",
+      "VersionID": 957
+    }
+  ]

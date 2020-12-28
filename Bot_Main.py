@@ -10,7 +10,7 @@ from Command_Handler import eBusCommand
 import logging
 
 FormatStr = f"[%(asctime)s] %(levelname)s : %(message)s"
-logging.basicConfig(filename = "./Bot.log", filemode = 'a', format = FormatStr)
+#logging.basicConfig(filename = "./Bot.log", filemode = 'a', format = FormatStr)
 
 #Webhook Object
 WebApp = Flask(__name__)
@@ -37,13 +37,20 @@ def Handler(msg):
     #Split Command
     text = text.strip()
     textBuffer = text.split(' ')
+    replyStr = ""
     if(textBuffer[0] == '/route' or textBuffer[0] == '/station' or textBuffer[0] == '/bus' or textBuffer[0] == '/route@NHITC_Bot' or textBuffer[0] == '/station@NHITC_Bot' or textBuffer[0] == '/bus@NHITC_Bot'):
         if(len(textBuffer) >= 2):
             CommandStr = textBuffer[0]
             TextStr = textBuffer[1]
-            Bot.sendMessage(chat_id, eBusCommand(textBuffer), "Markdown")
+            replyStr = eBusCommand(textBuffer)
         else:
-            Bot.sendMessage(chat_id, 'Please enter the key word', "Markdown")
+            replyStr = 'Please enter the key word'
+    
+    #傳送訊息
+    try:
+        Bot.sendMessage(chat_id, replyStr)
+    except:
+        Bot.sendMessage(chat_id, replyStr)
     print("\n")
 
 BotHandler = OrderedWebhook(Bot, Handler)

@@ -1,0 +1,24 @@
+[
+    {
+      "StopUID": "TPE10000",
+      "StopID": "10000",
+      "AuthorityID": "004",
+      "StopName": {
+        "Zh_tw": "蘆洲總站",
+        "En": "Luzhou Bus Terminal"
+      },
+      "StopPosition": {
+        "PositionLat": 25.089107361013,
+        "PositionLon": 121.465845849213,
+        "GeoHash": "wsqqsp2dx"
+      },
+      "StopAddress": "中正路333號同向(總站旁候車亭)(向南)",
+      "Bearing": "E",
+      "StationID": "3698",
+      "City": "Taipei",
+      "CityCode": "TPE",
+      "LocationCityCode": "NWT",
+      "UpdateTime": "2020-12-26T04:16:19+08:00",
+      "VersionID": 957
+    }
+  ]

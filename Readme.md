@@ -84,3 +84,11 @@ StopInfo
 ---
         Stops information.
         站牌資訊
+
+---
+
+Source
+===
+Data from: Public transport data exchange
+資料來源: 交通部公共運輸整合資訊流通服務平台(PTX)
+![image]https://ptx.transportdata.tw/PTX/logo.png

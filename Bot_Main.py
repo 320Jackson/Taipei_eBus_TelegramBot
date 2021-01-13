@@ -37,20 +37,35 @@ def Handler(msg):
     #Split Command
     text = text.strip()
     textBuffer = text.split(' ')
-    replyStr = ""
-    if(textBuffer[0] == '/route' or textBuffer[0] == '/station' or textBuffer[0] == '/bus' or textBuffer[0] == '/route@NHITC_Bot' or textBuffer[0] == '/station@NHITC_Bot' or textBuffer[0] == '/bus@NHITC_Bot'):
+    #Station/Bus Function
+    if(textBuffer[0] == '/station' or textBuffer[0] == '/bus' or textBuffer[0] == '/station@NHITC_Bot' or textBuffer[0] == '/bus@NHITC_Bot'):        
+        replyStr = ""
         if(len(textBuffer) >= 2):
-            CommandStr = textBuffer[0]
             TextStr = textBuffer[1]
             replyStr = eBusCommand(textBuffer)
         else:
-            replyStr = 'Please enter the key word'
+            replyStr = 'Please enter the key word.'
+        #傳送訊息
+        try:
+            Bot.sendMessage(chat_id, replyStr)
+        except:
+            Bot.sendMessage(chat_id, replyStr)
+
+    elif(textBuffer[0] == '/route' or textBuffer[0] == '/route@NHITC_Bot'):
+        replyStr = []
+        if(len(textBuffer) >= 2):
+            Buffer = eBusCommand(textBuffer)
+            replyStr = Buffer.split('/')
+        else:
+            replyStr.append("Please enter the key word.")
+
+        for Run in replyStr:
+            #傳送訊息
+            try:
+                Bot.sendMessage(chat_id, Run)
+            except:
+                Bot.sendMessage(chat_id, Run)    
     
-    #傳送訊息
-    try:
-        Bot.sendMessage(chat_id, replyStr)
-    except:
-        Bot.sendMessage(chat_id, replyStr)
     print("\n")
 
 BotHandler = OrderedWebhook(Bot, Handler)

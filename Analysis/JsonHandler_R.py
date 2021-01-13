@@ -26,7 +26,3 @@ def Analysis_StationMoving(RouteName, StaData, BusData, Direction):
     RouteDetail = getRouteDetail(RouteName)
 
     print(RouteDetail)
-
-    
-
-

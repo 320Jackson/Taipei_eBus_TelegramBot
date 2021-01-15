@@ -54,8 +54,7 @@ def Handler(msg):
     elif(textBuffer[0] == '/route' or textBuffer[0] == '/route@NHITC_Bot'):
         replyStr = []
         if(len(textBuffer) >= 2):
-            Buffer = eBusCommand(textBuffer)
-            replyStr = Buffer.split('/')
+            replyStr = eBusCommand(textBuffer)
         else:
             replyStr.append("Please enter the key word.")
 

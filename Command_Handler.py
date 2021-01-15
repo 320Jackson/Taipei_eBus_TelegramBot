@@ -1,7 +1,7 @@
 from WebTask.Web_Crawler import Download_Task
 from Analysis.JsonHandler_Sta import Station_List
 from Analysis.JsonHandler_Bus import Bus_List
-from Analysis.JsonHandler_R import Analysis_StationMoving, getRouteDetail
+from Analysis.JsonHandler_R import getRouteDetail
 
 def eBusCommand(CommandArr):
     Command = CommandArr[0]
@@ -11,13 +11,19 @@ def eBusCommand(CommandArr):
 
     if(Command == "/route" or Command == "/route@NHITC_Bot"):
         #是否搜尋方向
-        Direction = 3
+        Direction = 2
         if(len(CommandArr) == 3):
             Direction = int(CommandArr[2])
         
-        getRouteDetail(KeyWord)
+        Buffer = getRouteDetail(KeyWord)
+        Output = []
+
+        if(Direction != 2):
+            Output.append(Buffer[Direction])
+        else:
+            Output = Buffer        
         
-        return "功能開發中"
+        return Output
 
     if(Command == "/station" or Command == "/station@NHITC_Bot"):
         #是否同時搜尋路線

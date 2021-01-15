@@ -1,3 +1,10 @@
+Update Log
+===
+        2020/12/11---站位搜尋、車輛動態功能
+        2020/12/28---修正部分演算法(線性搜尋->二分搜尋)
+        2021/1/16---新增路線動態搜尋，正式版完成
+
+---
 Analysis
 ===
 Detail_info.py
@@ -14,8 +21,8 @@ JsonHandler_Bus.py
 ---
 JsonHandler_R.py
 ---
-        This feature is still developing.
-        本功能正在開發中
+        Analysis api data, return route of station estimated time of arrival.
+        分析api資訊，回傳路線各站位的預估到站時間
 
 ---
 JsonHandler_Sta.py

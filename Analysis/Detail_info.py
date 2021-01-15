@@ -6,6 +6,7 @@ def SearchTarget(TargetID, JsonObj, Mode):
     IsFound = False
     Start = 0
     End = len(JsonObj) - 1
+    Output = None
     
     while(IsFound != True):
         if(Start > End):

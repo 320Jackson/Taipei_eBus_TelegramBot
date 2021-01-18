@@ -56,8 +56,8 @@ def Analysis_StationMoving(RouteMap, StationTime, BusTime):
         BusNum = SearchTarget(StopID, BusTime, 1)
         CarNum = ""
         if(BusNum != None):
-            CarNum = BusNum["PlateNumb"]
-        Output += f"{AnalysisStopStatus(EstimatedTime)}\t{StopInfo['StopName']['Zh_tw']}\t\t[{CarNum}]\n"
+            CarNum = f"[{BusNum['PlateNumb']}]"
+        Output += f"{AnalysisStopStatus(EstimatedTime)}\t{StopInfo['StopName']['Zh_tw']}\t\t{CarNum}\n"
 
     return Output
 

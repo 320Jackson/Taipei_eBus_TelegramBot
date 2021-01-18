@@ -57,13 +57,15 @@ def Handler(msg):
             replyStr = eBusCommand(textBuffer)
         else:
             replyStr.append("Please enter the key word.")
-
-        for Run in replyStr:
-            #傳送訊息
-            try:
-                Bot.sendMessage(chat_id, Run)
-            except:
-                Bot.sendMessage(chat_id, Run)    
+        if(replyStr == []):
+            Bot.sendMessage(chat_id, "Route not found")
+        else:
+            for Run in replyStr:
+                #傳送訊息
+                try:
+                    Bot.sendMessage(chat_id, Run)
+                except:
+                    Bot.sendMessage(chat_id, Run)    
     
     print("\n")
 

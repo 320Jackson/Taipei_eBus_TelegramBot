@@ -5,6 +5,11 @@ from Analysis.JsonHandler_R import getRouteDetail
 
 def eBusCommand(CommandArr):
     Command = CommandArr[0]
+    
+    if(Command == "/help" or Command == "/help@NHITC_Bot"):
+        Output = "*為必填資訊\n/route <*路線名稱> <方向(0去程, 1回程)>\n/station <*站牌名稱> <路線名稱>\n/bus <*車號>"
+        return Output
+    
     KeyWord = CommandArr[1]
     KeyWord = KeyWord.replace('（','(')
     KeyWord = KeyWord.replace('）',')')

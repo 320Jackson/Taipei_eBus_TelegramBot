@@ -65,7 +65,14 @@ def Handler(msg):
                 try:
                     Bot.sendMessage(chat_id, Run)
                 except:
-                    Bot.sendMessage(chat_id, Run)    
+                    Bot.sendMessage(chat_id, Run)
+    
+    elif(textBuffer[0] == '/help' or textBuffer[0] == '/help@NHITC_Bot'):
+        replyStr = eBusCommand(textBuffer)
+        try:
+            Bot.sendMessage(chat_id, replyStr)
+        except:
+            Bot.sendMessage(chat_id, replyStr)
     
     print("\n")
 

@@ -24,10 +24,16 @@ def getRouteDetail(RouteName):
     #取得各站動態
     URL = f"https://ptx.transportdata.tw/MOTC/v2/Bus/EstimatedTimeOfArrival/City/Taipei/{RouteName}?$orderby=StopID&$format=JSON"
     Output_Code, StationTime = Download_Task(URL)
+    if(StationTime == "[]"):
+        URL = f"https://ptx.transportdata.tw/MOTC/v2/Bus/EstimatedTimeOfArrival/City/NewTaipei/{RouteName}?$orderby=StopID&$format=JSON"
+        Output_Code, StationTime = Download_Task(URL)
     print(Output_Code)
     #取得車輛動態
     URL = f"https://ptx.transportdata.tw/MOTC/v2/Bus/RealTimeNearStop/City/Taipei/{RouteName}?$orderby=StopID&$format=JSON"
     Output_Code, BusTime = Download_Task(URL)
+    if(BusTime == "[]"):
+        URL = f"https://ptx.transportdata.tw/MOTC/v2/Bus/RealTimeNearStop/City/NewTaipei/{RouteName}?$orderby=StopID&$format=JSON"
+        Output_Code, BusTime = Download_Task(URL)
     print(Output_Code)
 
     #動態資料整理

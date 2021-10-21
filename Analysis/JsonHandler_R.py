@@ -69,21 +69,24 @@ def Analysis_StationMoving(RouteMap, StationTime, BusTime):
 
 def AnalysisStopStatus(Item):
     Output = ""
-    if(Item["StopStatus"] == 0):
-        Mins = Item["EstimateTime"] // 60
-        if(Mins < 2):
-            Output = "即將進站"
-        else:    
-            Output = str(Mins) + "分鐘"
-    elif(Item["StopStatus"] == 1):
-        try:
-            Output = str(Item["EstimateTime"] // 60) + "分鐘"
-        except:
-            Output = "目前未發車"                
-    elif(Item["StopStatus"] == 2):
-        Output = "交管不停靠"
-    elif(Item["StopStatus"] == 3):
-        Output = "末班車已過"
-    elif(Item["StopStatus"] == 4):
-        Output = "今日未營運"
+    try:
+        if(Item["StopStatus"] == 0):
+            Mins = Item["EstimateTime"] // 60
+            if(Mins < 2):
+                Output = "即將進站"
+            else:    
+                Output = str(Mins) + "分鐘"
+        elif(Item["StopStatus"] == 1):
+            try:
+                Output = str(Item["EstimateTime"] // 60) + "分鐘"
+            except:
+                Output = "目前未發車"                
+        elif(Item["StopStatus"] == 2):
+            Output = "交管不停靠"
+        elif(Item["StopStatus"] == 3):
+            Output = "末班車已過"
+        elif(Item["StopStatus"] == 4):
+            Output = "今日未營運"
+    except:
+        return ""
     return Output
